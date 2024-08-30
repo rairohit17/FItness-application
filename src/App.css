@@ -1,0 +1,40 @@
+
+.horizontal-scroller::-webkit-scrollbar {
+    display: none;
+  }
+  
+ 
+  .horizontal-scroller {
+    scrollbar-width: none; 
+  }
+  
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+  
+  .scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    
+  }
+  
+  
+  .scroll-button.left-0 {
+    left: 10px;
+  }
+  
+ 
+  .scroll-button.right-0 {
+    right: 10px;
+  }
+  

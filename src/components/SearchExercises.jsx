@@ -16,7 +16,7 @@ import HorizontalScrollerBar from "./horizontalScrollerBar";
         const fetchExerciseData=  async ()  =>{
         const bodyPartsData= await fetch ("https://exercisedb.p.rapidapi.com/exercises/bodyPartList",options)
         const res= await bodyPartsData.json()
-          setBodyParts(['all',...res])
+        setBodyParts([...res])
         
         
         
@@ -52,7 +52,8 @@ import HorizontalScrollerBar from "./horizontalScrollerBar";
     }
     
     return (
-        <Stack alignItems="center" mt="37px" justifyContent="center" p="20px"
+        <div>
+            <Stack alignItems="center" mt="37px" justifyContent="center" p="20px"
         >
             
             <Typography className="text-white opacity-60"
@@ -65,12 +66,15 @@ import HorizontalScrollerBar from "./horizontalScrollerBar";
             setSearch(e.target.value)
 
 
-           }} className="h-12  md:w-[700px]  w-[250px] bg-slate-900 md:text-3xl pl-4 text-white opacity-60 rounded-md" type="text" placeholder="search Exercise/Body  Parts " />
+           }} className="h-12  md:w-[700px]  w-[250px] bg-slate-900  bg-fixed md:text-3xl pl-4 text-white opacity-60 rounded-md" type="text" placeholder="search Exercise/Body  Parts " />
            <button onClick={()=>handleSearch()} className="w-[100px] h-12 ml-4 rounded-lg bg-orange-800 text-white opacity-75 hover:opacity-50 active:translate-y-1">Search</button></div>
-           <HorizontalScrollerBar data={bodyParts}
+           
+        </Stack>
+        <HorizontalScrollerBar data={bodyParts}
            bodyPart={bodyPart}
            setBodyPart={setBodyPart}/>
-        </Stack>
+        </div>
+        
     )
 }
 export default SearchExercise;
