@@ -20,12 +20,12 @@ import Exercises from "../components/Exercises";
             setExercises={setExercises} 
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}></SearchExercise>
-
             
-         </div>
          <Exercises setExercises={setExercises}
                   exercises={exercises}
                   bodyPart={bodyPart}></Exercises>
+         </div>
+         
 
        </div>
     )

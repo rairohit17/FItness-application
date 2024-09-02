@@ -26,13 +26,7 @@ function HorizontalScrollerBar({ data, bodyPart, setBodyPart }) {
 
   return (
     <div className=" w-screen mt-[100px] border-t-4 border-slate-800  pt-[50px]">
-      <button
-        className="scroll-button left-0"
-        onClick={scrollLeft}
-        aria-label="Scroll Left"
-      >
-        ◀
-      </button>
+     
       
         <div
           ref={scrollContainerRef}
@@ -43,18 +37,14 @@ function HorizontalScrollerBar({ data, bodyPart, setBodyPart }) {
             <div key={index} onClick={()=>{
               setBodyPart(exercise) ;
             }} className="inline-block">
-              <BodyPartsCard element={exercise} />
+              <BodyPartsCard element={exercise}
+               />
             </div>
           ))}
         </div>
       
-      <button
-        className="scroll-button right-0"
-        onClick={scrollRight}
-        aria-label="Scroll Right"
-      >
-        ▶
-      </button>
+      
+      
     </div>
   );
 }
